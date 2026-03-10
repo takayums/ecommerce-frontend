@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 // Layout
 import MainLayout from "../layouts/MainLayout";
+import { AuthPage, HomePage } from "../pages";
 
 // Pages
 
@@ -12,8 +13,9 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <h2 className="underline text-blue-500">Hello World</h2>,
+        element: <HomePage />,
       },
     ],
   },
+  { path: "/auth", element: <AuthPage /> },
 ]);

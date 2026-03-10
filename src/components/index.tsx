@@ -1,5 +1,10 @@
+// Atom Components
+import Input from "./atom/Input";
+import Button from "./atom/Button";
+
 // Molecules Components
 import Navbar from "./molecules/Navbar";
-// Atom Components
+import FormAuth from "./molecules/FormAuth";
+import Footer from "./molecules/Footer";
 
-export { Navbar };
+export { Input, Button, Navbar, FormAuth, Footer };
