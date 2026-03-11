@@ -1,15 +1,19 @@
+import type { ReactNode } from "react";
 import type React from "react";
 
 type ButtonVariant = "primary" | "secondary" | "outline" | "danger";
 type ButtonSize = "sm" | "md" | "lg";
+type IconsPosistion = "right" | "left";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
+  icons?: ReactNode;
+  iconsPosition?: IconsPosistion;
 }
 
 const baseStyle =
-  "inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offseet-2";
+  "flex flex-row items-center justify-center gap-2 font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offseet-2";
 
 const variants: Record<ButtonVariant, string> = {
   primary: "bg-indigo-500 text-white hover:bg-indigo-600 focus:ring-indigo-500",
@@ -31,6 +35,8 @@ export default function Button({
   size = "md",
   className = "",
   disabled,
+  icons,
+  iconsPosition = "left",
   ...props
 }: ButtonProps) {
   const classes = `
@@ -42,7 +48,9 @@ export default function Button({
   `;
   return (
     <button className={classes} disabled={disabled} {...props}>
-      {children}
+      {icons && iconsPosition == "left" && icons}
+      <span>{children}</span>
+      {icons && iconsPosition == "right" && icons}
     </button>
   );
 }
