@@ -6,5 +6,6 @@ import Button from "./atom/Button";
 import Navbar from "./molecules/Navbar";
 import FormAuth from "./molecules/FormAuth";
 import Footer from "./molecules/Footer";
+import CardPrduct from "./molecules/CardProduct";
 
-export { Input, Button, Navbar, FormAuth, Footer };
+export { Input, Button, Navbar, FormAuth, Footer, CardPrduct };
