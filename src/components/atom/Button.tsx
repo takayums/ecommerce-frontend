@@ -20,7 +20,7 @@ const variants: Record<ButtonVariant, string> = {
   secondary: "bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-400",
   danger: "bg-red-500 text-white hover:bg-red-600 focus:ring-red-500",
   outline:
-    "bg-white text-gray-900 hover:bg-indigo-600 hover:text-white focus:ring-indigo-500",
+    "bg-white border border-gray-300 text-gray-700 hover:bg-indigo-600 hover:text-white focus:ring-indigo-500",
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -49,7 +49,7 @@ export default function Button({
   return (
     <button className={classes} disabled={disabled} {...props}>
       {icons && iconsPosition == "left" && icons}
-      <span>{children}</span>
+      {children && <span>{children}</span>}
       {icons && iconsPosition == "right" && icons}
     </button>
   );
