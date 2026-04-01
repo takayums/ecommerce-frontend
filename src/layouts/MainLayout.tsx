@@ -5,7 +5,7 @@ import { Footer, Navbar } from "../components";
 
 export default function MainLayout() {
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="font-roboto flex min-h-dvh flex-col">
       {/* Navbar */}
       <Navbar />
       {/* Main */}

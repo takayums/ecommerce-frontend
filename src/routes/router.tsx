@@ -1,11 +1,20 @@
-// Node Modules
+// Library
 import { createBrowserRouter } from "react-router-dom";
 
 // Layout
 import MainLayout from "../layouts/MainLayout";
-import { AuthPage, HomePage } from "../pages";
+import AdminLayout from "../layouts/AdminLayout";
 
 // Pages
+import {
+  AuthPage,
+  CategoryPage,
+  CustomerPage,
+  DashboardPage,
+  HomePage,
+  OrderPage,
+  ProductsPage,
+} from "../pages";
 
 export const router = createBrowserRouter([
   {
@@ -18,4 +27,30 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "/auth", element: <AuthPage /> },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        index: true,
+        element: <DashboardPage />,
+      },
+      {
+        path: "products",
+        element: <ProductsPage />,
+      },
+      {
+        path: "category",
+        element: <CategoryPage />,
+      },
+      {
+        path: "orders",
+        element: <OrderPage />,
+      },
+      {
+        path: "customers",
+        element: <CustomerPage />,
+      },
+    ],
+  },
 ]);

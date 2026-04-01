@@ -1,5 +1,6 @@
 // Libraries / Packages
 import { RiSearchLine, RiShoppingBagLine, RiSunLine } from "@remixicon/react";
+
 export default function Navbar() {
   return (
     <header className="border-b border-gray-300">
