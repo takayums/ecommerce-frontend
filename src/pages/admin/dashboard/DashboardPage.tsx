@@ -3,7 +3,7 @@ import {
   BarTopSlaesChart,
   MontlySlaesChart,
   StatDashboard,
-} from "../components";
+} from "../../../components";
 
 // Icons
 import {

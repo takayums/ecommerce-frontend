@@ -2,15 +2,19 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // Layout
-import MainLayout from "../layouts/MainLayout";
-import AdminLayout from "../layouts/AdminLayout";
+import MainLayout from "@/layouts/MainLayout";
+import AdminLayout from "@/layouts/AdminLayout";
 
 // Pages
 import {
   AuthPage,
   CategoryPage,
+  CreateCategoryPage,
+  CreateProductPage,
   CustomerPage,
   DashboardPage,
+  EditCategoryPage,
+  EditProductPage,
   HomePage,
   OrderPage,
   ProductsPage,
@@ -39,9 +43,19 @@ export const router = createBrowserRouter([
         path: "products",
         element: <ProductsPage />,
       },
+      { path: "products/create", element: <CreateProductPage /> },
+      { path: "products/edit/:id", element: <EditProductPage /> },
       {
         path: "category",
         element: <CategoryPage />,
+      },
+      {
+        path: "category/create",
+        element: <CreateCategoryPage />,
+      },
+      {
+        path: "category/edit/:id",
+        element: <EditCategoryPage />,
       },
       {
         path: "orders",

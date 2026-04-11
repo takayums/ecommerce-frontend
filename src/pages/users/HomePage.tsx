@@ -1,4 +1,4 @@
-import { CardPrduct } from "../components";
+import { CardPrduct } from "../../components";
 
 export default function HomePage() {
   return (

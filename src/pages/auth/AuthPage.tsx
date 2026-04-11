@@ -1,4 +1,4 @@
-import { FormAuth } from "../components";
+import { FormAuth } from "../../components";
 
 export default function AuthPage() {
   return (

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import type React from "react";
+import { Link } from "react-router-dom";
 
 type ButtonVariant = "primary" | "secondary" | "outline" | "danger";
 type ButtonSize = "sm" | "md" | "lg";
@@ -10,6 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   icons?: ReactNode;
   iconsPosition?: IconsPosistion;
+  href?: string;
 }
 
 const baseStyle =
@@ -37,6 +39,7 @@ export default function Button({
   disabled,
   icons,
   iconsPosition = "left",
+  href,
   ...props
 }: ButtonProps) {
   const classes = `
@@ -46,11 +49,21 @@ export default function Button({
     ${disabled ? "opacity-50 cursor-not-allowed" : ""}
     ${className}
   `;
+  if (href) {
+    return (
+      <Link to={href} className={classes}>
+        {icons && iconsPosition === "left" && icons}
+        {children && <span>{children}</span>}
+        {icons && iconsPosition === "right" && icons}
+      </Link>
+    );
+  }
+
   return (
     <button className={classes} disabled={disabled} {...props}>
-      {icons && iconsPosition == "left" && icons}
+      {icons && iconsPosition === "left" && icons}
       {children && <span>{children}</span>}
-      {icons && iconsPosition == "right" && icons}
+      {icons && iconsPosition === "right" && icons}
     </button>
   );
 }

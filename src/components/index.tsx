@@ -1,6 +1,8 @@
 // Atom Components
-import Input from "./atom/Input";
 import Button from "./atom/Button";
+import FileInput from "./atom/FileInput";
+import Input from "./atom/Input";
+import Select from "./atom/Select";
 
 // Molecules Components
 import Navbar from "./molecules/Navbar";
@@ -14,8 +16,10 @@ import MontlySlaesChart from "./molecules/MontlySlaesChart";
 import BarTopSlaesChart from "./molecules/BarTopSlaesChart";
 
 export {
-  Input,
   Button,
+  FileInput,
+  Input,
+  Select,
   Navbar,
   FormAuth,
   Footer,

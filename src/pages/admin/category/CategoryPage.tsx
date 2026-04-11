@@ -1,5 +1,5 @@
 // Components
-import { Button, Input } from "../components";
+import { Button, Input } from "@/components";
 
 // Icons
 import {
@@ -33,7 +33,9 @@ export default function CategoryPage() {
           >
             Export
           </Button>
-          <Button icons={<RiAddLine size={20} />}>Add Category</Button>
+          <Button icons={<RiAddLine size={20} />} href="/admin/category/create">
+            Add Category
+          </Button>
         </div>
       </div>
       {/* Search Category */}
@@ -67,120 +69,23 @@ export default function CategoryPage() {
             <td className="py-3 text-sm font-normal">
               Eltronik tools for everyone
             </td>
-            <td className="font-mediu py-3 text-sm whitespace-nowrap">
-              <Button
-                variant="primary"
-                icons={<RiEyeLine size={20} />}
-                iconsPosition="left"
-              >
-                Details
-              </Button>
-              <Button
-                variant="secondary"
-                icons={<RiPencilLine size={20} />}
-                iconsPosition="left"
-              >
-                Edit
-              </Button>
-              <Button
-                variant="danger"
-                icons={<RiDeleteBinLine size={20} />}
-                iconsPosition="left"
-              >
-                Delete
-              </Button>
-            </td>
-          </tr>
-          <tr className="border-b border-gray-200">
-            <td className="py-3 text-sm font-medium">Elektornik</td>
-            <td className="py-3 text-sm font-normal">
-              Eltronik tools for everyone
-            </td>
             <td className="py-3 text-sm font-medium whitespace-nowrap">
               <div className="flex gap-2">
                 <Button
                   variant="primary"
                   icons={<RiEyeLine size={20} />}
                   iconsPosition="left"
-                >
-                  Details
-                </Button>
+                />
                 <Button
                   variant="secondary"
                   icons={<RiPencilLine size={20} />}
                   iconsPosition="left"
-                >
-                  Edit
-                </Button>
+                />
                 <Button
                   variant="danger"
                   icons={<RiDeleteBinLine size={20} />}
                   iconsPosition="left"
-                >
-                  Delete
-                </Button>
-              </div>
-            </td>
-          </tr>
-          <tr className="border-b border-gray-200">
-            <td className="py-3 text-sm font-medium">Elektornik</td>
-            <td className="py-3 text-sm font-normal">
-              Eltronik tools for everyone
-            </td>
-            <td className="py-3 text-sm font-medium whitespace-nowrap">
-              <div className="flex gap-2">
-                <Button
-                  variant="primary"
-                  icons={<RiEyeLine size={20} />}
-                  iconsPosition="left"
-                >
-                  Details
-                </Button>
-                <Button
-                  variant="secondary"
-                  icons={<RiPencilLine size={20} />}
-                  iconsPosition="left"
-                >
-                  Edit
-                </Button>
-                <Button
-                  variant="danger"
-                  icons={<RiDeleteBinLine size={20} />}
-                  iconsPosition="left"
-                >
-                  Delete
-                </Button>
-              </div>
-            </td>
-          </tr>
-          <tr className="border-b border-gray-200">
-            <td className="py-3 text-sm font-medium">Elektornik</td>
-            <td className="py-3 text-sm font-normal">
-              Eltronik tools for everyone
-            </td>
-            <td className="py-3 text-sm font-medium whitespace-nowrap">
-              <div className="flex gap-2">
-                <Button
-                  variant="primary"
-                  icons={<RiEyeLine size={20} />}
-                  iconsPosition="left"
-                >
-                  Details
-                </Button>
-                <Button
-                  variant="secondary"
-                  icons={<RiPencilLine size={20} />}
-                  iconsPosition="left"
-                >
-                  Edit
-                </Button>
-                <Button
-                  variant="danger"
-                  icons={<RiDeleteBinLine size={20} />}
-                  iconsPosition="left"
-                >
-                  Delete
-                </Button>
+                />
               </div>
             </td>
           </tr>
