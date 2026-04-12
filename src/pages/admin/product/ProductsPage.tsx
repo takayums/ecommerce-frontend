@@ -52,69 +52,71 @@ export default function ProductsPage() {
         </Button>
       </div>
 
-      <table className="min-w-full table-fixed text-gray-700">
-        <thead className="border-b border-gray-200">
-          <tr>
-            <th className="py-3 text-start text-sm font-medium">Products</th>
-            <th className="py-3 text-start text-sm font-medium">Category</th>
-            <th className="py-3 text-start text-sm font-medium">Price</th>
-            <th className="py-3 text-start text-sm font-medium">Stock</th>
-            <th className="py-3 text-start text-sm font-medium">Size</th>
-            <th className="py-3 text-start text-sm font-medium">Create At</th>
-            <th className="w-50 py-3 text-start text-sm font-medium">
-              Actions
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="border-b border-gray-200">
-            <td className="py-3">
-              {/* Wrapper Product */}
-              <div className="flex items-center gap-3">
-                {/* Img */}
-                <div className="size-12 rounded-lg border border-gray-200">
-                  <img
-                    src="https://react-demo.tailadmin.com/images/product/product-01.jpg"
-                    alt="Laptop"
-                    className="object-contain"
+      <div className="overflow-x-auto pb-4">
+        <table className="min-w-250 table-fixed text-gray-700 md:w-full">
+          <thead className="border-b border-gray-200">
+            <tr>
+              <th className="py-3 text-start text-sm font-medium">Products</th>
+              <th className="py-3 text-start text-sm font-medium">Category</th>
+              <th className="py-3 text-start text-sm font-medium">Price</th>
+              <th className="py-3 text-start text-sm font-medium">Stock</th>
+              <th className="py-3 text-start text-sm font-medium">Size</th>
+              <th className="py-3 text-start text-sm font-medium">Create At</th>
+              <th className="w-50 py-3 text-start text-sm font-medium">
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-b border-gray-200">
+              <td className="py-3">
+                {/* Wrapper Product */}
+                <div className="flex items-center gap-3">
+                  {/* Img */}
+                  <div className="size-12 rounded-lg border border-gray-200">
+                    <img
+                      src="https://react-demo.tailadmin.com/images/product/product-01.jpg"
+                      alt="Laptop"
+                      className="object-contain"
+                    />
+                  </div>
+                  {/* Title Product */}
+                  <div>
+                    <h3 className="text-sm font-medium">Maccbooks</h3>
+                    <p className="text-xs text-gray-500">2 variants</p>
+                  </div>
+                </div>
+                {/* End Wrapper Product */}
+              </td>
+              <td className="py-3 text-sm font-medium">Elektornik</td>
+              <td className="py-3 text-sm font-medium">Rp. 2000</td>
+              <td className="py-3 text-sm font-medium">100</td>
+              <td className="py-3 text-sm font-medium">S, M, L, XL</td>
+              <td className="py-3 text-sm font-medium">01 Dec, 2027</td>
+              <td className="font-mediu whitespace-nowrapm py-3 text-sm">
+                <div className="flex gap-2">
+                  <Button
+                    variant="primary"
+                    icons={<RiEyeLine size={20} />}
+                    iconsPosition="left"
+                  />
+                  <Button
+                    variant="secondary"
+                    icons={<RiPencilLine size={20} />}
+                    iconsPosition="left"
+                    href="/admin/products/edit/1"
+                  />
+                  <Button
+                    variant="danger"
+                    icons={<RiDeleteBinLine size={20} />}
+                    iconsPosition="left"
                   />
                 </div>
-                {/* Title Product */}
-                <div>
-                  <h3 className="text-sm font-medium">Maccbooks</h3>
-                  <p className="text-xs text-gray-500">2 variants</p>
-                </div>
-              </div>
-              {/* End Wrapper Product */}
-            </td>
-            <td className="py-3 text-sm font-medium">Elektornik</td>
-            <td className="py-3 text-sm font-medium">Rp. 2000</td>
-            <td className="py-3 text-sm font-medium">100</td>
-            <td className="py-3 text-sm font-medium">S, M, L, XL</td>
-            <td className="py-3 text-sm font-medium">01 Dec, 2027</td>
-            <td className="font-mediu whitespace-nowrapm py-3 text-sm">
-              <div className="flex gap-2">
-                <Button
-                  variant="primary"
-                  icons={<RiEyeLine size={20} />}
-                  iconsPosition="left"
-                />
-                <Button
-                  variant="secondary"
-                  icons={<RiPencilLine size={20} />}
-                  iconsPosition="left"
-                  href="/admin/products/edit/1"
-                />
-                <Button
-                  variant="danger"
-                  icons={<RiDeleteBinLine size={20} />}
-                  iconsPosition="left"
-                />
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       {/* Pagination */}
       <div className="flex items-center justify-between py-3">
         <p className="text-sm font-normal text-gray-500">

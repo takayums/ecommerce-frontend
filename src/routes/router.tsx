@@ -16,6 +16,7 @@ import {
   EditCategoryPage,
   EditProductPage,
   HomePage,
+  NotFoundPage,
   OrderPage,
   ProductsPage,
 } from "../pages";
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "/auth", element: <AuthPage /> },
+
   {
     path: "/admin",
     element: <AdminLayout />,
@@ -67,4 +69,5 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  { path: "*", element: <NotFoundPage /> },
 ]);

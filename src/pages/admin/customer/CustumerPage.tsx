@@ -47,42 +47,47 @@ export default function CustomerPage() {
       </div>
 
       {/* Table of Category */}
-      <table className="min-w-full table-fixed text-gray-700">
-        <thead className="border-b border-gray-200">
-          <th className="py-3 text-start text-sm font-medium">Name</th>
-          <th className="py-3 text-start text-sm font-medium">Email</th>
-          <th className="py-3 text-start text-sm font-medium">Address</th>
-          <th className="w-50 py-3 text-start text-sm font-medium">Actions</th>
-        </thead>
-        <tbody>
-          <tr className="border-b border-gray-200">
-            <td className="py-3 text-sm font-normal">takayums</td>
-            <td className="py-3 text-sm font-normal">takayums@gmail.com</td>
-            <td className="py-3 text-sm font-normal">
-              8642 Yule Street, Arvada CO 80007
-            </td>
-            <td className="font-mediu whitespace-nowrapm py-3 text-sm">
-              <div className="flex gap-2">
-                <Button
-                  variant="primary"
-                  icons={<RiEyeLine size={20} />}
-                  iconsPosition="left"
-                />
-                <Button
-                  variant="secondary"
-                  icons={<RiPencilLine size={20} />}
-                  iconsPosition="left"
-                />
-                <Button
-                  variant="danger"
-                  icons={<RiDeleteBinLine size={20} />}
-                  iconsPosition="left"
-                />
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+
+      <div className="overflow-x-auto pb-4">
+        <table className="min-w-250 table-fixed text-gray-700 md:w-full">
+          <thead className="border-b border-gray-200">
+            <th className="py-3 text-start text-sm font-medium">Name</th>
+            <th className="py-3 text-start text-sm font-medium">Email</th>
+            <th className="py-3 text-start text-sm font-medium">Address</th>
+            <th className="w-50 py-3 text-start text-sm font-medium">
+              Actions
+            </th>
+          </thead>
+          <tbody>
+            <tr className="border-b border-gray-200">
+              <td className="py-3 text-sm font-normal">takayums</td>
+              <td className="py-3 text-sm font-normal">takayums@gmail.com</td>
+              <td className="py-3 text-sm font-normal">
+                8642 Yule Street, Arvada CO 80007
+              </td>
+              <td className="font-mediu whitespace-nowrapm py-3 text-sm">
+                <div className="flex gap-2">
+                  <Button
+                    variant="primary"
+                    icons={<RiEyeLine size={20} />}
+                    iconsPosition="left"
+                  />
+                  <Button
+                    variant="secondary"
+                    icons={<RiPencilLine size={20} />}
+                    iconsPosition="left"
+                  />
+                  <Button
+                    variant="danger"
+                    icons={<RiDeleteBinLine size={20} />}
+                    iconsPosition="left"
+                  />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div className="flex items-center justify-between py-3">
         <p className="text-sm font-normal text-gray-500">
           Showing <strong>1</strong> to <strong>7</strong> of{" "}

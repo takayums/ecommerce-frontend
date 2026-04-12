@@ -14,6 +14,9 @@ import CategoryPage from "./admin/category/CategoryPage.tsx";
 import CreateCategoryPage from "./admin/category/CreateCategoryPage.tsx";
 import EditCategoryPage from "./admin/category/EditCategoryPage.tsx";
 
+// Error
+import NotFoundPage from "./error/NotFoundPage.tsx";
+
 export {
   AuthPage,
   HomePage,
@@ -26,4 +29,5 @@ export {
   CategoryPage,
   CreateCategoryPage,
   EditCategoryPage,
+  NotFoundPage,
 };

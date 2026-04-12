@@ -65,8 +65,8 @@ export default function DashboardPage() {
 
           {/* Table Content */}
           <div className="overflow-x-auto pb-4">
-            <table className="w-160 border-y border-gray-200 text-gray-500 md:w-full">
-              <thead>
+            <table className="min-w-250 table-fixed text-gray-700 md:w-full">
+              <thead className="border-b border-gray-200">
                 <tr>
                   <th className="py-3 text-start text-sm font-medium">
                     Products

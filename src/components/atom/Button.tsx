@@ -27,8 +27,8 @@ const variants: Record<ButtonVariant, string> = {
 
 const sizes: Record<ButtonSize, string> = {
   sm: "px-3 py-1.5 text-sm",
-  md: "px-4 py-2 text-sm",
-  lg: "px-6 py-3 text-base",
+  md: "px-3 py-1.5 md:px-4 md:py-2 text-sm",
+  lg: "px-3 py-1.5 md:px-6 md:py-3 text-sm md:text-base",
 };
 
 export default function Button({
